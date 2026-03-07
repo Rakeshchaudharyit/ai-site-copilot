@@ -56,7 +56,7 @@ class RestController
             ]
         ]);
 
-        // ✅ Quick Fix (SEO + Excerpt)
+        //  Quick Fix (SEO + Excerpt)
         register_rest_route('aisc/v1', '/quick-fix', [
             'methods' => 'POST',
             'callback' => [$this, 'quick_fix'],
