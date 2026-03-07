@@ -14,7 +14,7 @@ class Dashboard
     {
         add_action('admin_enqueue_scripts', [$this, 'enqueue']);
 
-        // ✅ AJAX handler for post selector dropdown
+        //  AJAX handler for post selector dropdown
         add_action('wp_ajax_aisc_get_posts', [$this, 'ajax_get_posts']);
     }
 
@@ -62,7 +62,7 @@ class Dashboard
         if (strpos($hook, 'aisc') === false)
             return;
 
-        // ✅ Cache-buster versions (forces latest JS/CSS)
+        //  Cache-buster versions (forces latest JS/CSS)
         $css_ver = file_exists(AISC_PATH . 'assets/admin.css') ? filemtime(AISC_PATH . 'assets/admin.css') : AISC_VERSION;
         $js_ver = file_exists(AISC_PATH . 'assets/admin.js') ? filemtime(AISC_PATH . 'assets/admin.js') : AISC_VERSION;
 
